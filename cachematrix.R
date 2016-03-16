@@ -11,7 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
   src <- x
   set <- function( mA ) {
     src <<- mA
-    inv <- NULL
+    inv <<- NULL
   }
   # get the value of the matrix
   
@@ -51,7 +51,7 @@ cacheSolve <- function(x, ...) {
 # A = matrix(c(1, 2, 3, 0, 1, 4, 5, 6, 0) , nrow=3, ncol=3, byrow=TRUE)
 # invA = solve(A)
 # cA = makeCacheMatrix(A)
-# cInvA = cacheSolve(A)
+# cInvA = cacheSolve(cA)
 
 ## should be all true matrix
 # invA == cA$getInv()
