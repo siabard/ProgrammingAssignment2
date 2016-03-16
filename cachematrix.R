@@ -4,9 +4,13 @@
 ## Forked By : Yeonho Jang <siabard@gmail.com>
 
 ## creates a special vector containing functions
+## set : set original matrix
+## get : get origianl matrix
+## setInv : set inverse of matrix
+## getInv : get inverse of matrix
 
 makeCacheMatrix <- function(x = matrix()) {
-  # set the value of the vector
+  # set the value of the martix
   inv <- NULL
   src <- x
   set <- function( mA ) {
@@ -31,7 +35,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## Return inverse of given matrix.
+## If there exists cached inverse result , use cached one .
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
